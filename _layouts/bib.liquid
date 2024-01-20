@@ -2,7 +2,7 @@
 ---
 <div class="row">
   {% if site.enable_publication_thumbnails %}
-    <div class="col-sm-2 {% if entry.preview %}preview{% else %}abbr{% endif %}">
+    <div class="col-sm-3 {% if entry.preview %}preview{% else %}abbr{% endif %}">
       {% if entry.preview %}
         {% if entry.preview contains '://' %}
           <img class="preview z-depth-1 rounded" src="{{ entry.preview }}">
@@ -11,9 +11,9 @@
           {%
             include figure.liquid
             path=entry_path
-            sizes = "200px"
-            class="preview z-depth-1 rounded"
-            zoomable=false
+            sizes = "800px"
+            class="preview z-depth-1"
+            zoomable=true
             alt=entry.preview
           %}
         {% endif %}
@@ -38,7 +38,7 @@
   {% endif %}
 
   <!-- Entry bib key -->
-  <div id="{{entry.key}}" class="{% if site.enable_publication_thumbnails %}col-sm-8{% else %}col-sm-10{% endif %}">
+  <div id="{{entry.key}}" class="{% if site.enable_publication_thumbnails %}col-sm-7{% else %}col-sm-10{% endif %}">
     <!-- Title -->
     <div class="title">{{ entry.title }}</div>
     <!-- Author -->
@@ -152,6 +152,11 @@
     <div class="periodical">
       {{ entry.note | strip }}
     </div>
+
+    {%- if entry.highlight -%}
+    <p style="color: red;"> {{entry.highlight }} </p>
+    <!-- {%- capture entrynote -%}{{ " " }}{{entry.note}}{%- endcapture -%} -->
+    {%- endif %}
 
     <!-- Links/Buttons -->
     <div class="links">

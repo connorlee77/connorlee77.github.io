@@ -1,8 +1,7 @@
 ---
 layout: post
-date: 2015-10-22 15:59:00-0400
+date: 2023-11-28
 inline: true
-related_posts: false
 ---
 
-A simple inline announcement.
+Our paper [*RGB-X Object Detection via Scene-Specific Fusion Modules*](https://arxiv.org/abs/2310.19372) has been accepted to [WACV 2024](https://wacv2024.thecvf.com).

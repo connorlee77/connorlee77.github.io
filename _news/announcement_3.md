@@ -1,8 +1,7 @@
 ---
 layout: post
-date: 2016-01-15 07:59:00-0400
+date: 2023-01-16 
 inline: true
-related_posts: false
 ---
 
-A simple inline announcement with Markdown emoji! :sparkles: :smile:
+Our [Thermal UDA](https://arxiv.org/pdf/2210.04367.pdf) paper was accepted by [ICRA 2023](https://www.icra2023.org).
